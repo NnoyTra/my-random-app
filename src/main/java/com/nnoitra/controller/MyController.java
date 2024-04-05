@@ -30,8 +30,8 @@ public class MyController {
 		throw new Exception("Error processing the request");
 	}
 	@GetMapping("/person/{id}")
-	public List<Person> getPersonById(@PathVariable("id") int id) {
-		List<Person> personById = myService.getPersonById(id);
+	public Person getPersonById(@PathVariable("id") int id) {
+		Person personById = myService.getPersonById(id);
 		return personById;
 	}
 }
