@@ -16,6 +16,9 @@ public class Car {
 	private String make;
 	@Column(name = "model")
 	private String model;
+	@Column(name = "person_id")
+	private int personId;
+	
 	public Car() {
 		super();
 	}
@@ -36,6 +39,12 @@ public class Car {
 	}
 	public void setModel(String model) {
 		this.model = model;
+	}
+	public int getPersonId() {
+		return personId;
+	}
+	public void setPersonId(int personId) {
+		this.personId = personId;
 	}
 	
 	

@@ -1,9 +1,12 @@
 package com.nnoitra.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "person")
@@ -18,8 +21,10 @@ public class Person {
 	private String lName;
 	@Column(name = "age")
 	private int age;
-	@Column(name = "car_id")
-	private String carId;
+	
+	@Transient
+	private List<Car> carList;
+	
 	public Person() {
 		super();
 	}
@@ -47,11 +52,11 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getCarId() {
-		return carId;
+	public List<Car> getCarList() {
+		return carList;
 	}
-	public void setCarId(String carId) {
-		this.carId = carId;
+	public void setCarList(List<Car> carList) {
+		this.carList = carList;
 	}
 	
 	
